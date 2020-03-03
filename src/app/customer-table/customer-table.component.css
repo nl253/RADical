@@ -1,0 +1,27 @@
+table {
+  margin: auto;
+}
+
+table td, table th {
+  padding: 0;
+}
+
+button.btn-sort {
+  margin-bottom: 5px !important;
+  padding: 8px 14px;
+}
+
+table tbody tr:hover {
+  background: #ccc0ca;
+  cursor: pointer;
+}
+
+table thead input {
+  width: 100%;
+}
+
+button.btn-close, button.btn-sort {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}

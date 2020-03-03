@@ -1,0 +1,63 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        <p>Customer Number</p>
+        <button class="btn-sort"
+                (click)="sortBy('customernumber')">sort</button>
+        <input type="text"
+               (input)="filters.customernumber = $event.target.value">
+      </th>
+      <th>
+        <p>Name</p>
+        <button class="btn-sort"
+                (click)="sortBy('fullname')">sort</button>
+        <input type="text"
+               (input)="filters.fullname = $event.target.value">
+      </th>
+      <th>
+        <p>Address</p>
+        <button class="btn-sort"
+                (click)="sortBy('theMainAddress')">sort</button>
+        <input type="text"
+               (input)="filters.theMainAddress = $event.target.value">
+      </th>
+      <th>
+        <p>Status</p>
+        <button class="btn-sort"
+                (click)="sortBy('theStatus')">sort</button>
+        <input type="text"
+               (input)="filters.theStatus = $event.target.value">
+      </th>
+      <th>
+        <p>Payment Type</p>
+        <button class="btn-sort"
+                (click)="sortBy('paymentType')">sort</button>
+        <input type="text"
+               (input)="filters.paymentType = $event.target.value">
+      </th>
+      <th>
+        <p>First Contract</p>
+        <button class="btn-sort"
+                (click)="sortBy('firstcontact')">sort</button>
+        <input type="text"
+               (input)="filters.firstcontact = $event.target.value">
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="focusCustomer = c" *ngFor="let c of customers">
+      <td>{{ c.customernumber }}</td>
+      <td>{{ c.fullname }}</td>
+      <td>{{ c.theMainAddress }}</td>
+      <td>{{ c.theStatus }}</td>
+      <td>{{ c.paymentType }}</td>
+      <td>{{ c.firstcontact | date:'shortDate' }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-customer-details *ngIf="focusCustomer"
+                      [customer]="focusCustomer"></app-customer-details>
+
+<button class="btn-close" *ngIf="focusCustomer" (click)="focusCustomer = undefined">Close</button>

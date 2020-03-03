@@ -1,0 +1,11 @@
+body {
+  font-family: Roboto, SansSerif, sans-serif;
+}
+
+button {
+  background: #c9ccda;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  min-width: 20px;
+}

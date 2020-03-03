@@ -1,0 +1,12 @@
+table {
+  margin: auto;
+}
+
+table tbody tr td:nth-child(1) {
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 20px;
+  text-align: center;
+}
